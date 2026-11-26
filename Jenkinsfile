@@ -5,6 +5,7 @@ pipeline {
       steps {
         withCredentials([string(credentialsId: 'deploy-key', variable: 'KEY')]) {
           sh 'echo "BRANCH=$BRANCH_NAME"; echo "$KEY" | rev'
+          // test
         }
       }
     }
